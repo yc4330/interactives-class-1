@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problem 1.8</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Problem statement: Change the height of the third rectangle to 200 -->
+  <svg width = 800 height = 800>
+    <rect x="50" y="50" width="80" height="80"></rect>
+    <rect x="150" y="50" width="80" height="120"></rect>
+    <rect x="250" y="50" width="80" height="160"></rect>
+    <rect x="350" y="50" width="80" height="180"></rect>
+
+  </svg>
+
+  <script>
+    // Your D3 code goes here
+    d3.selectAll("rect")
+      .filter(function(d,i){return i == 2})
+      .attr("height", "200")
+  </script>
+</body>
+</html>

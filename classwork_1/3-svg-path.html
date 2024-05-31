@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Classwork</title>
+</head>
+<body>
+
+    <svg width="300" height="200">
+        <!-- Use the <path> element to create a polygon. 
+                Start at (150,0) and 
+                move the line to (75,200), 
+                move the line horizontally to 225 and close the line
+               -->
+               
+        <path d="M150 0 L75 200 H225 Z" stroke="black" fill="transparent"></path>
+ 
+
+
+        <!-- Use the <path> element to create a curve. 
+                Start from coordinates (10, 80), 
+                create a Quadratic curve to (90 80) with a control point at (50, 10) 
+                and another quadratic curve to (180, 80) with the control point at (130, 150)-->
+        <path d="M10 80 Q50 10 90 80 Q 130 150 180 80" stroke="black" fill="transparent"></path>
+            
+           
+            
+            
+       <!-- Use the <path> element to create a curve. 
+                Start from coordinates (10, 80), 
+                create a black stroked Bezier curve to (90 80) with a control point at (50, 10) and (80, 10)
+                and a red stroked Bezier curve to (90 80) with a control point at (50, 10) and (50, 10)-->
+
+                <path d="M10 80 C50 10 80 10 90 80" stroke="black" fill="transparent" />
+                <path d="M10 80 C50 10 50 10 90 80" stroke="red" fill="transparent" />
+            </svg>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+    
+<body>
+    <svg width= 500 height = 100>
+        <rect x=50 y=50 ></rect>
+        <rect x=100 y=50></rect>
+        <rect x=150 y=50></rect>
+        <rect x=200 y=50></rect>
+        <rect x=250 y=50></rect>
+    </svg>
+</body>
+
+<script>
+
+    //    Problem statement: Create rectangles for every data point and 
+    //                       Join the data such that the height of the rectangle 
+    //                       corresponds to the data value. Adjust the width, x and y
+    
+    var dataArray = [30, 50, 25, 15, 80]
+    d3.selectAll('rect')
+        .data(dataArray)
+        .join('rect')
+        .attr('width', 20)
+        .attr('height', function(d){return d});
+
+  </script>
+
+</script>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem 3: D3 select statements</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Problem statement: Select all elements with the class "highlight" and remove them from the DOM. 
+       [HINT! .remove() to remove elements]-->
+  
+  <div class="highlight">Element 1</div>
+  <div>Element 2</div>
+  <p class="highlight">Element 3</p>
+  <span class="highlight">Element 4</span>
+
+  <script>
+    // Your D3 code goes here
+    d3.selectAll(".highlight").remove();
+  </script>
+</body>
+</html>

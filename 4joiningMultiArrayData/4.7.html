@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+    
+
+<body>
+    <svg width= 1000 height = 800>
+    </svg>
+</body>
+
+<script>
+
+    //    Problem statement: Create text elements where its x position corresponds to 10 times the 'age' value
+
+    
+    var dataSet = [
+        {
+            "name": "Mika",
+            "gender": "male",
+            "age": 2
+        },
+        {
+            "name": "John",
+            "gender": "male",
+            "age": 30
+        },
+        {
+            "name": "Emily",
+            "gender": "female",
+            "age": 50
+        },
+        {
+            "name": "Michael",
+            "gender": "male",
+            "age": 25
+        },
+        {
+            "name": "Sarah",
+            "gender": "female",
+            "age": 15
+        },
+        {
+            "name": "David",
+            "gender": "male",
+            "age": 80
+        }
+    ];
+
+    // Your code goes here
+    d3.select('svg')
+    .selectAll("text")
+    .data(dataSet)
+    .join("text")
+    .attr("x", function(d) {return d.age * 10}) 
+    .attr("y", function(d,i){return 100*i})
+    .text(function(d) { return d.name}) 
+    .attr("fill", "black");
+
+</script>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+    
+<body>
+    <svg width= 500 height = 800>
+    </svg>
+</body>
+
+<script>
+
+    //    Problem statement: Create rectangles for every data point and 
+    //                       Join the data such that the width of the rectangle 
+    //                       corresponds to the age value. Adjust the height, x and y
+    
+    var dataSet = [
+        {
+            "name": "John",
+            "age": 30
+        },
+        {
+            "name": "Emily",
+            "age": 50
+        },
+        {
+            "name": "Michael",
+            "age": 25
+        },
+        {
+            "name": "Sarah",
+            "age": 15
+        },
+        {
+            "name": "David",
+            "age": 80
+        }
+    ];
+    d3.select("svg")
+        .selectAll("rect")
+        .data(dataSet)
+        .join("rect")
+        .attr("x", 50)
+        .attr("y", function(d,i){return 50 + 50*i})
+        .attr("width", function(d){return d.age * 10})
+        .attr("height", 30);
+
+
+
+</script>
+
+</html>

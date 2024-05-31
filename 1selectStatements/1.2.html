@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problem 1.4: D3 Select Statements</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Problem statement: Change the width of all <rect> elements on the webpage to 20 pixels -->
+  <svg>
+    <rect x="50" y="50" width="80" height="80" fill="CadetBlue"></rect>
+    <rect x="150" y="50" width="120" height="120" fill="BurlyWood"></rect>
+    <rect x="250" y="50" width="160" height="160" fill="Chocolate"></rect>
+  </svg>
+
+  <script>
+    // Write your D3 code here
+    d3.selectAll("rect")
+      .attr("width", 20);
+  </script>
+</body>
+</html>

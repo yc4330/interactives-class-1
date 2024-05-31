@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problem 1.3: D3 Select Statements</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Problem statement: Change the width of all the <rect> elements on the webpage to 100 pixels. 
+                            Change the fill of just the first rectangle to "DarkSlateGray"-->
+  <svg width = 800>
+    <rect x="240" y="50" width="160" height="80" fill = "DarkSlateBlue"></rect>
+    <rect x="10" y="50" width="80" height="40" fill = "DarkSalmon"></rect>
+    <rect x="125" y="50" width="120" height="60" fill = "DarkSeaGreen"></rect>
+  </svg>
+
+  <script>
+    // Write your D3 code here
+      d3.selectAll("rect")
+        .attr("width", 100);
+      d3.select("rect")
+        .attr("fill", "DarkSlateGray");
+  </script>
+</body>
+</html>

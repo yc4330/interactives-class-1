@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+    
+<body>
+    <svg width= 500 height = 800>
+    </svg>
+</body>
+
+<script>
+
+    //    Problem statement: Build on your answer from problem 4.4. 
+        // If the person is male -> fill the rect red, female -> fill the rect orange
+    
+    var dataSet = [
+        {
+            "name": "John",
+            "gender": "male",
+            "age": 30
+        },
+        {
+            "name": "Emily",
+            "gender": "female",
+            "age": 50
+        },
+        {
+            "name": "Michael",
+            "gender": "male",
+            "age": 25
+        },
+        {
+            "name": "Sarah",
+            "gender": "female",
+            "age": 15
+        },
+        {
+            "name": "David",
+            "gender": "male",
+            "age": 80
+        }
+    ];
+
+    d3.select("svg")
+        .selectAll("rect")
+        .data(dataSet)
+        .join("rect")
+        .attr("x", 50)
+        .attr("y", function(d,i){return 50 + 50*i})
+        .attr("width", function(d){return d.age * 10})
+        .attr("height", 30)
+        .attr("fill", function(d){return d.gender == "male" ? "red" : "orange"});
+
+
+    
+</script>
+
+</html>

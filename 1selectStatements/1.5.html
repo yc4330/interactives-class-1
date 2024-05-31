@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problem: Change x-coordinate of SVG paths</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Problem statement: Using a transform function, move the first path left 100 pixels and scale it to be 3x its size (uniformly) 
+       [HINT! .attr("transform", "translate(x, y) scale(x, y)")]-->
+  
+  <svg width = 800 height = 800>
+    <path d="M0,0 L100,100 L150,50 Z" opacity =0.5></path>
+    <path d="M0,0 L100,100 L150,50 Z"></path>
+  </svg>
+
+  <script>
+    // Write your D3 code here
+    d3.select("path")
+      .attr("transform", "translate(-100, 0) scale(3, 3)");
+  </script>
+</body>
+</html>

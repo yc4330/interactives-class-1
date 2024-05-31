@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+    
+<body>
+    <svg width= 500 height = 800>
+        <rect x=50 y=50 ></rect>
+        <rect x=50 y=100></rect>
+        <rect x=50 y=150></rect>
+        <rect x=50 y=200></rect>
+        <rect x=50 y=250></rect>
+
+    </svg>
+</body>
+
+<script>
+
+    //  Problem statement: Join the data to each of the rectangles in the HTML markup such that the 
+    //                     width of the rectangle corresponds to 10 times the data value.
+    
+    var dataArray = [30, 50, 25, 15, 80]
+
+    d3.selectAll('rect')
+        .data(dataArray)
+        .join('rect')
+        .attr('height', 20)
+        .attr('width', function(d){return 10 * d})
+
+</script>
+
+</html>

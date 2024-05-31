@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3.1</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+
+<!-- In this section we are going to primary work in the console. 
+    Make sure you have the console open in your browser 
+-->
+        
+<body>
+</body>
+
+<script>
+
+// Problem statement: Print out the min, max, minIndex and maxIndex of the age in this multi-variable array
+    
+var dataSet = [
+  {
+    "name": "John",
+    "age": 30
+  },
+  {
+    "name": "Emily",
+    "age": 50
+  },
+  {
+    "name": "Michael",
+    "age": 25
+  },
+  {
+    "name": "Sarah",
+    "age": 15
+  },
+  {
+    "name": "David",
+    "age": 80
+  }
+];
+var age = d3.map(dataSet, function(d){return d.age}) 
+console.log(age) 
+
+console.log("min value: ", d3.min(age))
+console.log("max value: ", d3.max(age))
+console.log("minIndex value: ", d3.minIndex(age))
+console.log("maxIndex value: ", d3.maxIndex(age))
+
+</script>
+
+</html>

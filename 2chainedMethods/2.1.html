@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problem 2.1</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <!-- Problem statement: Modify the circle's properties so it has a radius of 50 pixels, 
+                          a center at (250,150) 
+                          and a fill color of red -->  
+</head>
+
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  padding: 8%
+  }
+</style>
+
+<body>
+  <header>
+    <h1>An Article about Circles</h1>
+  </header>
+
+  <main>
+    <section>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nisi in mauris finibus tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat sapien et felis consectetur, ac bibendum mauris iaculis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nisi in mauris finibus tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat sapien et felis consectetur, ac bibendum mauris iaculis.</p>
+
+      <h3>Beautiful Circle</h3>
+      <svg width= 500 height= 300 style="background-color:rgb(248, 246, 246)">
+        <circle></circle>
+      </svg>
+    </section>
+
+    <section>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nisi in mauris finibus tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat sapien et felis consectetur, ac bibendum mauris iaculis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ultrices nisi in mauris finibus tincidunt. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur volutpat sapien et felis consectetur, ac bibendum mauris iaculis.</p>
+    </section>
+  </main>
+</body>
+
+<script>
+  // Your D3 code goes here
+  d3.select("circle")
+    .attr("cx", 250)
+    .attr("cy", 150)
+    .attr("r", 50)
+    .attr("fill", "red");
+  
+</script>
+</html>

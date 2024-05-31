@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problem: Change fill color of SVG ellipses</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Problem statement: Change the properties of all these <ellipse> elements so they look like circles-->
+    
+  <svg width = 800 height = 800>
+    <ellipse cx="100" cy="100" rx="80" ry="40" fill="green"></ellipse>
+    <ellipse cx="200" cy="150" rx="80" ry="20" fill="pink"></ellipse>
+    <ellipse cx="300" cy="200" rx="80" ry="150" fill="orange"></ellipse>
+  </svg>
+
+  <script>
+    // Write your D3 code here
+    d3.selectAll("ellipse")
+      .attr("ry", 80);
+  </script>
+
+</body>
+</html>

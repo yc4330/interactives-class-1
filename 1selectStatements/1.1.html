@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Problem 1.1: D3 select statements</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+  <!-- Problem statement: Select and change the color of the first <circle> element on the webpage. -->
+  <svg>
+    <circle cx="50" cy="50" r="30"></circle>
+    <circle cx="150" cy="50" r="30"></circle>
+    <circle cx="250" cy="50" r="30"></circle>
+  </svg>
+
+  <script>
+    // Write your D3 code here
+    d3.select("circle")
+      .attr("fill", "red");
+  </script>
+</body>
+</html>

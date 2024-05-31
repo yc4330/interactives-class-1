@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem 2: D3 select statements</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+<!-- Problem: Select and add text content of all the <p> elements within a specific <div> with the class "container". -->
+    <div class="container">
+        <p></p>
+        <p></p>
+        <p></p>
+    </div>
+</body>
+
+<script>
+    // Your D3 code for Problem 2 goes here
+    d3.select("div.container")
+        .selectAll("p")
+        .text("Hello, World!");
+</script>
+</html>

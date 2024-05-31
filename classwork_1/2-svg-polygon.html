@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Classwork</title>
+</head>
+<body>
+
+    <svg width="300" height="200">
+        
+        <!--Try it yourself: 
+
+            Use the <rect> element to create a rectangle. The rectangle should have 
+            a width of 200 pixels, 
+            a height of 100 pixels,
+            be positioned at coordinates (50, 50). 
+            
+            The rectangle should have a light green fill color (#90ee90) and 
+            a black stroke color (#000000) with 
+            a stroke width of 2 pixels. -->
+        
+        <rect x="50" y="50" width="200" height="100" fill="#90ee90" stroke="#000000" stroke-width="2"> </rect>
+        
+        <!-- Round out the edges of this rectangle with a radius of 10 -->
+        <rect x="50" y="50" width="200" height="100" fill="#90ee90" stroke="#000000" stroke-width="2" rx="10"> </rect>
+
+        
+        <!-- 
+            
+            Use the <circle> element to create a circle. The circle should have 
+                a radius of 40 pixels 
+                be positioned at coordinates (250, 100)
+                a yellow fill color (#ffff00) -->
+
+        <circle cx="250" cy="100" r="40" fill="#ffff00"></circle>
+
+        <!-- Replace the circle with an ellipse with a horizontal radius of 60 pixels, 
+            a vertical radius of 30 pixels, and have it positioned at coordinates (300, 180) -->
+
+        <ellipse cx="300" cy="180" rx="60" ry="30"></ellipse>
+        <!-- What do you think went wrong? 
+        A: There's just a part of the ellipse visible, because it is outside the SVG canvas. -->
+
+    </svg>
+</body>
+</html>
